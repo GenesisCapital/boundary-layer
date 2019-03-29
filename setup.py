@@ -28,11 +28,15 @@ setuptools.setup(
             'config/operators/*.yaml',
             'config/resources/*.yaml',
             'config/subdags/*.yaml',
-            ]
+            ],
+        'genesis_capital_plugin': [
+            'config/operators/*.yaml',
+            ],
         },
     entry_points = {
             'boundary_layer_plugins': [
                 'default=boundary_layer_default_plugin.plugin:DefaultPlugin',
+                'genesis_capital=genesis_capital_plugin.plugin:GenesisCapitalPlugin',
             ]
         },
     extras_require = extras,
